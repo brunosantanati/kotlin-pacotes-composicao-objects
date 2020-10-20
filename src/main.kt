@@ -1,5 +1,4 @@
-import teste.testaAutenticacao
-
 fun main() {
-    testaAutenticacao()
+    val palavra: kotlin.String = ""
+    val palavraJava: java.lang.String = java.lang.String("")
 }
