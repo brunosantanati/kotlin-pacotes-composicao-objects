@@ -1,7 +1,6 @@
 package br.com.alura.bytebank.modelo
 
-var totalContas = 0
-    private set //garante que essa variavel possa ser modificada apenas nesse arquivo onde ela é declarada
+import br.com.alura.bytebank.Contador
 
 abstract class Conta(
     var titular: Cliente,
@@ -12,7 +11,7 @@ abstract class Conta(
 
     init {
         println("Criando conta")
-        totalContas++
+        Contador.total++
     }
 
     fun deposita(valor: Double) {
@@ -41,11 +40,6 @@ class ContaCorrente(
     numero = numero
 ) {
 
-    init {
-        println("Criando conta")
-        totalContas++
-    }
-
     override fun saca(valor: Double) {
         val valorComTaxa = valor + 0.1
         if(this.saldo >= valorComTaxa){
@@ -61,11 +55,6 @@ class ContaPoupanca(
     titular = titular,
     numero = numero
 ) {
-
-    init {
-        println("Criando conta")
-        totalContas++
-    }
 
     override fun saca(valor: Double) {
         if(this.saldo >= valor){
