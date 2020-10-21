@@ -63,6 +63,7 @@ fun testaFuncionarios() {
     calculadora.registra(fran)
     calculadora.registra(gui)
     calculadora.registra(maria)
+    calculadora.registra(1)
 
     println("total de bonificação: ${calculadora.total}")
 }

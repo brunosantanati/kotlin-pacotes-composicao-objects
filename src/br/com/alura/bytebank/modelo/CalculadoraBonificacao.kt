@@ -6,8 +6,9 @@ class CalculadoraBonificacao {
         private set
 
     fun registra(funcionario: Any){
-        funcionario as Funcionario
-        this.total += funcionario.bonificacao
+        if(funcionario is Funcionario) { //smart cast: verifica e faz o cast
+            this.total += funcionario.bonificacao
+        }
     }
 
 }
