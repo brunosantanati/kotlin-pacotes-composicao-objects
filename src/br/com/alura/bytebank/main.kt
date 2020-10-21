@@ -3,35 +3,19 @@ package br.com.alura.bytebank
 import br.com.alura.bytebank.modelo.Endereco
 
 fun main() {
-
     val endereco = Endereco()
 
-    println()
-    println(1)
-    println(1.0)
-    println(true)
-    println("teste")
-    println(endereco) //isso funciona porque o Kotlin implementou a função recebendo um objeto do tipo Any
+    val objeto: Any = Any()
 
-    //sobregarca
-    imprime()
+    imprime(objeto)
+
     imprime(1)
     imprime(1.0)
-    imprime(endereco) //criamos uma função que recebe um Endereco
+    val teste: Any = imprime(endereco)
+    println(teste)
 }
 
-fun imprime(){
-
-}
-
-fun imprime(valor: Int){
-
-}
-
-fun imprime(valor: Double){
-
-}
-
-fun imprime(endereco: Endereco){
-
+fun imprime(valor: Any) : Any{
+    println(valor)
+    return valor
 }
