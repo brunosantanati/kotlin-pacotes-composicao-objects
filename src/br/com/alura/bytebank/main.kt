@@ -11,8 +11,8 @@ fun main() {
     )
 
     val enderecoNovo = Endereco(
-        bairro = "Vila Mariana",
-        numero = 1000,
+        logradouro = "Rua Vergueiro",
+        complemento = "Alura",
         cep = "00000-000"
     )
 

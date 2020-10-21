@@ -22,13 +22,34 @@ complemento='$complemento')
     }
 
     override fun equals(other: Any?): Boolean {
-        if(other != null && other is Endereco){
-            return this.cep == other.cep
-        }
-        return false
+        if (this === other) return true
+        if (javaClass != other?.javaClass) return false
+
+        other as Endereco
+
+        if (logradouro != other.logradouro) return false
+        if (numero != other.numero) return false
+        if (bairro != other.bairro) return false
+        if (cidade != other.cidade) return false
+        if (estado != other.estado) return false
+        if (cep != other.cep) return false
+        if (complemento != other.complemento) return false
+
+        return true
     }
 
     override fun hashCode(): Int {
-        return cep.hashCode()
+
+        //Why does Java's hashCode() in String use 31 as a multiplier?
+        //https://stackoverflow.com/questions/299304/why-does-javas-hashcode-in-string-use-31-as-a-multiplier
+        
+        var result = logradouro.hashCode()
+        result = 31 * result + numero
+        result = 31 * result + bairro.hashCode()
+        result = 31 * result + cidade.hashCode()
+        result = 31 * result + estado.hashCode()
+        result = 31 * result + cep.hashCode()
+        result = 31 * result + complemento.hashCode()
+        return result
     }
 }
