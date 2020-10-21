@@ -7,14 +7,14 @@ abstract class Conta(
     var saldo = 0.0
         protected set
 
-    companion object Contador{
+    companion object {
         var total = 0
             private set
     }
 
     init {
         println("Criando conta")
-        //Contador.total++ //não precisa do Contador para acessar, veja abaixo:
+        //Companion.total++ //Quando o companion object não tem nome, para referencia-lo posso usar Companion
         total++
     }
 
