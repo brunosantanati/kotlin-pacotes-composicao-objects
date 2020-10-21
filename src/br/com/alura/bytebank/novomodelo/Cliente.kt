@@ -1,4 +1,5 @@
 package br.com.alura.bytebank.novomodelo
 
-class Cliente {
-}
+data class Cliente (
+    val nome: String
+)
