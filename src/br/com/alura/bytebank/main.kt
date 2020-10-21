@@ -3,8 +3,8 @@ package br.com.alura.bytebank
 import br.com.alura.bytebank.modelo.Endereco
 
 fun main() {
-    val endereco = Endereco()
-    val enderecoNovo = Endereco()
+    val endereco = Endereco(logradouro = "Rua Vergueiro", complemento = "Alura")
+    val enderecoNovo = Endereco(bairro = "Vila Mariana", numero = 1000)
     val enderecoNovo2 = endereco
 
     println(endereco.equals(endereco)) //equals que Endereco herda de Any
