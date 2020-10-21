@@ -1,6 +1,7 @@
 package br.com.alura.bytebank.modelo
 
-import br.com.alura.bytebank.totalContas
+var totalContas = 0
+    private set //garante que essa variavel possa ser modificada apenas nesse arquivo onde ela é declarada
 
 abstract class Conta(
     var titular: Cliente,

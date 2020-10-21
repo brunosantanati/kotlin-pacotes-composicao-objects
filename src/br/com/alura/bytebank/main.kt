@@ -3,9 +3,8 @@ package br.com.alura.bytebank
 import br.com.alura.bytebank.modelo.Cliente
 import br.com.alura.bytebank.modelo.ContaCorrente
 import br.com.alura.bytebank.modelo.ContaPoupanca
+import br.com.alura.bytebank.modelo.totalContas
 import br.com.alura.bytebank.teste.testaContasDiferentes
-
-var totalContas = 0
 
 fun main() {
     val alex = Cliente(nome = "Alex", cpf = "", senha = 1)
