@@ -25,6 +25,6 @@ fun main() {
     val contaCorrente = ContaCorrente(titular = alex, numero = 1001)
 
     testaContasDiferentes()
-    
+
     println("Total de contas: ${Conta.total}")
 }
