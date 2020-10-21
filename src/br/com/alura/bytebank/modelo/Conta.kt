@@ -32,3 +32,44 @@ abstract class Conta(
         return false
     }
 }
+
+class ContaCorrente(
+    titular: Cliente,
+    numero: Int
+) : Conta(
+    titular = titular,
+    numero = numero
+) {
+
+    init {
+        println("Criando conta")
+        totalContas++
+    }
+
+    override fun saca(valor: Double) {
+        val valorComTaxa = valor + 0.1
+        if(this.saldo >= valorComTaxa){
+            this.saldo -= valorComTaxa
+        }
+    }
+}
+
+class ContaPoupanca(
+    titular: Cliente,
+    numero: Int
+) : Conta(
+    titular = titular,
+    numero = numero
+) {
+
+    init {
+        println("Criando conta")
+        totalContas++
+    }
+
+    override fun saca(valor: Double) {
+        if(this.saldo >= valor){
+            this.saldo -= valor
+        }
+    }
+}
