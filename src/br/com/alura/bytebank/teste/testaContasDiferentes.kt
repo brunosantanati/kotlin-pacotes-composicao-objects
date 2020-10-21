@@ -9,6 +9,11 @@ fun testaContasDiferentes() {
         titular = Cliente(nome = "Alex", cpf = "111.111.111-11", senha = 1),
         numero = 1000
     )
+
+    println("Titular")
+    println("nome do titular ${contaCorrente.titular.nome}")
+    println("cpf do titular ${contaCorrente.titular.cpf}")
+
     val contaPoupanca = ContaPoupanca(
         titular = Cliente(nome = "Fran", cpf = "222.222.222-22", senha = 2),
         numero = 1001
