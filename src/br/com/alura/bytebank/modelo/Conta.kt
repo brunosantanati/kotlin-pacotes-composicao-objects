@@ -1,16 +1,17 @@
 package br.com.alura.bytebank.modelo
 
+import br.com.alura.bytebank.totalContas
+
 abstract class Conta(
     var titular: Cliente,
     val numero: Int
 ) {
     var saldo = 0.0
         protected set
-    var total = 0
 
     init {
         println("Criando conta")
-        total++
+        totalContas++
     }
 
     fun deposita(valor: Double) {

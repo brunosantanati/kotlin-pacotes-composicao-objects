@@ -5,6 +5,8 @@ import br.com.alura.bytebank.modelo.ContaCorrente
 import br.com.alura.bytebank.modelo.ContaPoupanca
 import br.com.alura.bytebank.teste.testaContasDiferentes
 
+var totalContas = 0
+
 fun main() {
     val alex = Cliente(nome = "Alex", cpf = "", senha = 1)
     val contaPoupanca = ContaPoupanca(titular = alex, numero = 1000)
@@ -12,6 +14,5 @@ fun main() {
 
     testaContasDiferentes()
 
-    println("Total de contas: ${contaPoupanca.total}")
-    println("Total de contas: ${contaCorrente.total}")
+    println("Total de contas: $totalContas")
 }
