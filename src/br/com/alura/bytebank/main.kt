@@ -1,6 +1,7 @@
 package br.com.alura.bytebank
 
 import br.com.alura.bytebank.modelo.Endereco
+import br.com.alura.bytebank.teste.testaFuncionarios
 
 fun main() {
     val endereco = Endereco()
@@ -13,6 +14,8 @@ fun main() {
     imprime(1.0)
     val teste: Any = imprime(endereco)
     println(teste)
+
+    testaFuncionarios()
 }
 
 fun imprime(valor: Any) : Any{
