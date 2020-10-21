@@ -3,6 +3,8 @@ package br.com.alura.bytebank
 import br.com.alura.bytebank.modelo.Endereco
 import br.com.alura.bytebank.teste.testaFuncionarios
 
+//Link doc sobre Smart Casts: https://kotlinlang.org/docs/reference/typecasts.html#smart-casts
+
 fun main() {
     val endereco = Endereco()
 
