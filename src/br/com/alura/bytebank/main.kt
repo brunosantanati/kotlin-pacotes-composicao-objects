@@ -3,10 +3,6 @@ package br.com.alura.bytebank
 import br.com.alura.bytebank.modelo.*
 import br.com.alura.bytebank.teste.testaContasDiferentes
 
-object Contador{
-    var total = 0
-}
-
 fun main() {
 
     //link doc "Object Expressions and Declarations": https://kotlinlang.org/docs/reference/object-declarations.html
@@ -30,5 +26,6 @@ fun main() {
 
     testaContasDiferentes()
 
-    println("Total de contas: ${Contador.total}")
+    //println("Total de contas: ${Conta.Contador.total}") //não precisa do Contador para acessar, veja abaixo:
+    println("Total de contas: ${Conta.total}")
 }

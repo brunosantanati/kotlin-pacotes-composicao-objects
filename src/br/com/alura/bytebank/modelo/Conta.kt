@@ -1,7 +1,5 @@
 package br.com.alura.bytebank.modelo
 
-import br.com.alura.bytebank.Contador
-
 abstract class Conta(
     var titular: Cliente,
     val numero: Int
@@ -9,9 +7,15 @@ abstract class Conta(
     var saldo = 0.0
         protected set
 
+    companion object Contador{
+        var total = 0
+            private set
+    }
+
     init {
         println("Criando conta")
-        Contador.total++
+        //Contador.total++ //não precisa do Contador para acessar, veja abaixo:
+        total++
     }
 
     fun deposita(valor: Double) {
