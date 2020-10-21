@@ -1,6 +1,9 @@
+package br.com.alura.bytebank.modelo
+
 class Cliente(
-    val nome: String,
+    var nome: String,
     val cpf: String,
+    var endereco: Endereco = Endereco(),
     private val senha: Int
 ) : Autenticavel {
 
@@ -9,6 +12,10 @@ class Cliente(
             return true
         }
         return false
+    }
+
+    override fun toString(): String {
+        return "Cliente(nome='$nome', cpf='$cpf', senha=$senha)"
     }
 
 }
